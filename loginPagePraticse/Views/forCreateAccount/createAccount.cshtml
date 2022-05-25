@@ -1,0 +1,34 @@
+﻿
+@{
+    ViewBag.Title = "createAccount";
+    Layout = null;
+}
+
+<h2>create Account</h2>
+@using (Html.BeginForm("saveData", "forCreateAccount", FormMethod.Post, new { id = "mainform1" }))
+{
+<label>User Name</label>
+<br />
+<input type="text" class="form-control" name="userName" id="userName" />
+<br />
+<label>Email</label>
+<br />
+<input type="email" class="form-control" name="email" id="email" />
+<br />
+<label>country</label>
+<br />
+<input type="text" class="form-control" name="country" id="country" />
+<br />
+<label>Password</label>
+<br />
+<input type="password" class="form-control" name="password" id="password" />
+<br />
+<br />
+<button class="btn-btn success" onclick="submitData();">Create Account</button>
+}
+<script>
+    function submitData() {
+        $("#mainform1").submit();
+    }
+</script>
+
